@@ -1,4 +1,5 @@
 package org.example;
 
-public class ControleTV {
+
+public class ControleTV implements{
 }
