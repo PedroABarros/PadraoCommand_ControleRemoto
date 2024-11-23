@@ -8,7 +8,7 @@ public class MudarCanalTVFuncao implements Command {
 
     private Integer canal;
 
-    public MudarCanalTVFuncao(TV tv, Integer canalNovo) {
+    public MudarCanalTVFuncao(TV tv, int canalNovo) {
         this.tv = tv;
         this.canal = canalNovo;
     }
