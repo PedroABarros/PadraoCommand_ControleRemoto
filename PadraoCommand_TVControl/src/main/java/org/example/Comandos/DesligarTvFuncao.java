@@ -1,9 +1,9 @@
 package org.example.Comandos;
 
-import org.example.FuncoesCommand;
+import org.example.Command;
 import org.example.TV;
 
-public class DesligarTvFuncao implements FuncoesCommand {
+public class DesligarTvFuncao implements Command {
 
 
     private TV tv;

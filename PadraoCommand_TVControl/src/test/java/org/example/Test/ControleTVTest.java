@@ -2,7 +2,7 @@ package org.example.Test;
 
 import org.example.Comandos.*;
 import org.example.ControleTV;
-import org.example.FuncoesCommand;
+import org.example.Command;
 import org.example.TV;
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ public class ControleTVTest {
     public void deveDiminuirVolume(){
         tv = new TV (50, 10);
         controle = new ControleTV();
-        FuncoesCommand dimuirVolume = new AbaixarVolumeFuncao(tv);
+        Command dimuirVolume = new AbaixarVolumeFuncao(tv);
         controle.executarTarefa(dimuirVolume);
 
         assertEquals("{\"volume\": 49, \"canal\": 10, \"status\": Desligado}", tv.getSituacao());
@@ -29,7 +29,7 @@ public class ControleTVTest {
     public void deveAumentarVolume(){
         tv = new TV (50, 10);
         controle = new ControleTV();
-        FuncoesCommand aumentarVolume = new AumentarVolumeFuncao(tv);
+        Command aumentarVolume = new AumentarVolumeFuncao(tv);
         controle.executarTarefa(aumentarVolume);
 
         assertEquals("{\"volume\": 51, \"canal\": 10, \"status\": Desligado}", tv.getSituacao());
@@ -39,7 +39,7 @@ public class ControleTVTest {
     public void deveLigarTV(){
         tv = new TV (50, 10);
         controle = new ControleTV();
-        FuncoesCommand ligarTV = new LigarTVFuncao(tv);
+        Command ligarTV = new LigarTVFuncao(tv);
         controle.executarTarefa(ligarTV);
 
         assertEquals("{\"volume\": 50, \"canal\": 10, \"status\": Ligado}", tv.getSituacao());
@@ -50,7 +50,7 @@ public class ControleTVTest {
         tv = new TV (50, 10);
         controle = new ControleTV();
         tv.setStatus("Ligado");
-        FuncoesCommand ligarTV = new DesligarTvFuncao(tv);
+        Command ligarTV = new DesligarTvFuncao(tv);
         controle.executarTarefa(ligarTV);
 
         assertEquals("{\"volume\": 50, \"canal\": 10, \"status\": Desligado}", tv.getSituacao());

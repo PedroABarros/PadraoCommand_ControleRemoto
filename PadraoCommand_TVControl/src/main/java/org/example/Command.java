@@ -1,5 +1,5 @@
 package org.example;
 
-public interface FuncoesCommand {
+public interface Command {
     void executar();
 }

@@ -1,9 +1,9 @@
 package org.example.Comandos;
 
-import org.example.FuncoesCommand;
+import org.example.Command;
 import org.example.TV;
 
-public class LigarTVFuncao implements FuncoesCommand {
+public class LigarTVFuncao implements Command {
     private TV tv;
 
     public LigarTVFuncao(TV tv) {
@@ -14,6 +14,4 @@ public class LigarTVFuncao implements FuncoesCommand {
     public void executar() {
         tv.ligarDesligar("Ligado");
     }
-
-
 }

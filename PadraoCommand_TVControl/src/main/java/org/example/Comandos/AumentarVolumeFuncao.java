@@ -1,9 +1,9 @@
 package org.example.Comandos;
 
-import org.example.FuncoesCommand;
+import org.example.Command;
 import org.example.TV;
 
-public class AumentarVolumeFuncao implements FuncoesCommand {
+public class AumentarVolumeFuncao implements Command {
 
     private TV tv;
 
@@ -15,6 +15,4 @@ public class AumentarVolumeFuncao implements FuncoesCommand {
     public void executar() {
         tv.trocarVolume(+1);
     }
-
-
 }

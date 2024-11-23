@@ -1,9 +1,9 @@
 package org.example.Comandos;
 
-import org.example.FuncoesCommand;
+import org.example.Command;
 import org.example.TV;
 
-public class AbaixarVolumeFuncao implements FuncoesCommand {
+public class AbaixarVolumeFuncao implements Command {
     private TV tv;
 
     public AbaixarVolumeFuncao(TV tv) {
