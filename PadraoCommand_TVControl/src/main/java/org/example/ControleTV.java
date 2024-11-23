@@ -1,5 +1,8 @@
 package org.example;
 
 
-public class ControleTV implements{
+public class ControleTV{
+    public void executarTarefa(FuncoesCommand comando) {
+        comando.executar();
+    }
 }
