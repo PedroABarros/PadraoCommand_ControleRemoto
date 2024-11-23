@@ -55,4 +55,16 @@ public class ControleTVTest {
 
         assertEquals("{\"volume\": 50, \"canal\": 10, \"status\": Desligado}", tv.getSituacao());
     }
+
+    @Test
+    public void deveMudarCanal(){
+        tv = new TV (50, 10);
+        controle = new ControleTV();
+
+        Command mudarCanal = new MudarCanalTVFuncao(tv,7);
+        controle.executarTarefa(mudarCanal);
+
+        assertEquals("{\"volume\": 50, \"canal\": 7, \"status\": Desligado}", tv.getSituacao());
+    }
+
 }

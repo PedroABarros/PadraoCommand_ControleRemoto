@@ -47,6 +47,10 @@ public class TV{
         this.setStatus(status);
     }
 
+    public void mudarCanal(Integer canal) {
+        this.setCanal(canal);
+    }
+
 
 
 
